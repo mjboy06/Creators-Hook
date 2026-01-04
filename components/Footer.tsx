@@ -2,6 +2,12 @@
 import React from 'react';
 
 const Footer: React.FC = () => {
+  const socialLinks = [
+    { name: 'Instagram', href: 'https://www.instagram.com/creators_hook/', icon: 'IG' },
+    { name: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61583802636836', icon: 'FB' },
+    { name: 'X', href: 'https://x.com/creatorshook', icon: 'X' }
+  ];
+
   return (
     <footer className="bg-black text-white py-16 sm:py-24 border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6">
@@ -9,21 +15,26 @@ const Footer: React.FC = () => {
           <div className="sm:col-span-2">
             <div className="flex items-center gap-3 mb-6 sm:mb-8 group cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               <img 
-                src="https://raw.githubusercontent.com/creatorshook/assets/main/logo.png" 
+                src="https://i.postimg.cc/FfTdp86J/All-Logos-(48).png" 
                 alt="Creators Hook Logo" 
                 className="w-10 h-10 sm:w-12 sm:h-12 object-contain brightness-125"
-                onError={(e) => {
-                  (e.target as HTMLImageElement).src = "https://i.postimg.cc/FfTdp86J/All-Logos-(48).png";
-                }}
               />
-              <span className="text-xl sm:text-2xl font-black tracking-tight text-white/40 group-hover:text-blue-500 transition-colors">CREATORS HOOK</span>
+              <span className="text-xl sm:text-2xl font-black tracking-tight text-white group-hover:text-blue-500 transition-colors uppercase">CREATORS HOOK</span>
             </div>
             <p className="text-gray-400 max-w-sm text-base sm:text-lg leading-relaxed mb-6 sm:mb-8">
-              Premium UGC agency specializing in high-converting video and graphic assets for modern brands.
+              We’re not just a UGC agency — we’re a performance partner for brands that want growth without guesswork.
             </p>
             <div className="flex gap-4">
-               {['ig', 'yt', 'li', 'tw'].map(s => (
-                 <a key={s} href="#" className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-blue-600 hover:border-blue-600 transition-all text-[10px] font-bold uppercase">{s}</a>
+               {socialLinks.map(s => (
+                 <a 
+                   key={s.name} 
+                   href={s.href} 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-blue-600 hover:border-blue-600 transition-all text-[10px] font-bold uppercase"
+                 >
+                   {s.icon}
+                 </a>
                ))}
             </div>
           </div>
@@ -55,11 +66,11 @@ const Footer: React.FC = () => {
         </div>
         
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 sm:pt-10 border-t border-white/10 text-gray-500 text-[10px] font-bold tracking-widest text-center md:text-left">
-          <p className="mb-6 md:mb-0 uppercase">MADE WITH ❤️ BY CREATORS HOOK AGENCY</p>
+          <p className="mb-6 md:mb-0 uppercase">MADE WITH ❤️ BY CREATORS HOOK</p>
           <div className="flex flex-wrap justify-center gap-6 sm:gap-10">
-            <a href="#" className="hover:text-white transition-colors uppercase">Privacy</a>
-            <a href="#" className="hover:text-white transition-colors uppercase">Terms</a>
-            <a href="#" className="hover:text-white transition-colors uppercase">Cookies</a>
+            <a href="#privacy" className="hover:text-white transition-colors uppercase">Privacy Policy</a>
+            <a href="#terms" className="hover:text-white transition-colors uppercase">Terms of Service</a>
+            <a href="#cookies" className="hover:text-white transition-colors uppercase">Cookies Settings</a>
           </div>
         </div>
       </div>

@@ -6,30 +6,30 @@ const UGCExplanation: React.FC = () => {
 
   const accordionItems = [
     {
-      title: "Non-biased Honest Reviews",
-      content: "UGC acts as a bridge of trust. Unlike traditional high-production commercials, UGC features real people sharing their genuine experiences. This authenticity is why customers trust UGC 8.7x more than influencer content."
+      title: "What Makes UGC Ads Different From Traditional Ads?",
+      content: "UGC ads are filmed by real creators using real products in real environments. They don’t feel like ads — they feel like content. This native look builds instant trust, drives higher engagement, and lowers customer acquisition costs."
     },
     {
-      title: "Relatable Real-Life Context",
-      content: "We show products being used in everyday environments. This helps potential buyers visualize the product in their own lives, removing the mental barrier between seeing an ad and making a purchase."
+      title: "Why Do UGC Ads Perform Better?",
+      content: "Because people trust people more than brands. UGC leverages social proof, authenticity, and human psychology to stop the scroll and turn attention into action."
     },
     {
-      title: "Built for Mobile First",
-      content: "All our UGC is produced in vertical 9:16 format, designed specifically for the platforms where your customers spend their time—TikTok, Instagram Reels, and YouTube Shorts."
+      title: "Where Are UGC Ads Used?",
+      content: "UGC ads are used across TikTok, Instagram, Facebook, YouTube Shorts, Snapchat, and landing pages. Anywhere your audience scrolls — UGC wins."
     }
   ];
 
   return (
     <section id="ugc" className="py-24 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="bg-blue-600 rounded-[3rem] p-8 md:p-20 text-white overflow-hidden relative shadow-2xl shadow-blue-600/20">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
+        <div className="bg-[#0f172a] rounded-[3rem] p-8 md:p-20 text-white overflow-hidden relative shadow-2xl">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
           
           <div className="relative z-10 grid md:grid-cols-2 gap-12 lg:gap-24 items-center">
             <div>
-              <span className="inline-block px-4 py-2 bg-white/10 rounded-full text-xs font-bold uppercase tracking-widest mb-6">Learn the Method</span>
+              <span className="inline-block px-4 py-2 bg-blue-600/20 text-blue-400 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-blue-600/30">The Strategy</span>
               <h2 className="text-4xl md:text-5xl font-black mb-10 leading-tight">
-                What is <span className="text-blue-200">UGC?</span>
+                What Are <span className="text-blue-500">UGC Ads?</span>
               </h2>
               
               <div className="space-y-4">
@@ -39,9 +39,9 @@ const UGCExplanation: React.FC = () => {
                       onClick={() => setActiveIndex(activeIndex === idx ? null : idx)}
                       className="w-full flex items-center justify-between p-6 text-left hover:bg-white/10 transition-colors"
                     >
-                      <span className="text-lg font-bold">{item.title}</span>
+                      <span className="text-lg font-bold leading-tight pr-4">{item.title}</span>
                       <svg 
-                        className={`w-5 h-5 transition-transform duration-300 ${activeIndex === idx ? 'rotate-180' : ''}`} 
+                        className={`w-5 h-5 flex-shrink-0 transition-transform duration-300 text-blue-500 ${activeIndex === idx ? 'rotate-180' : ''}`} 
                         fill="none" 
                         stroke="currentColor" 
                         viewBox="0 0 24 24"
@@ -49,8 +49,8 @@ const UGCExplanation: React.FC = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                       </svg>
                     </button>
-                    <div className={`transition-all duration-300 ease-in-out overflow-hidden ${activeIndex === idx ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0'}`}>
-                      <div className="p-6 pt-0 text-blue-100 leading-relaxed">
+                    <div className={`transition-all duration-300 ease-in-out overflow-hidden ${activeIndex === idx ? 'max-h-[300px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                      <div className="p-6 pt-0 text-slate-400 leading-relaxed font-medium">
                         {item.content}
                       </div>
                     </div>
@@ -60,16 +60,16 @@ const UGCExplanation: React.FC = () => {
             </div>
 
             <div className="relative reveal-item">
-              <div className="aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl transform md:rotate-3 scale-95 hover:rotate-0 transition-transform duration-700 border-4 border-white/10">
+              <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl transform md:rotate-3 scale-95 hover:rotate-0 transition-transform duration-700 border-4 border-white/5">
                 <img 
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800" 
-                  alt="UGC Creators" 
+                  src="https://res.cloudinary.com/djwiyyxkm/image/upload/v1767498675/ChatGPT_Image_Jan_4_2026_09_19_55_AM_nggamh.png" 
+                  alt="UGC Creators Content" 
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-10 -left-10 w-44 h-44 bg-white text-blue-600 p-6 rounded-full flex flex-col items-center justify-center text-center shadow-2xl font-black animate-bounce-subtle z-20">
-                <span className="text-4xl">84%</span>
-                <span className="text-[10px] uppercase tracking-tighter leading-tight mt-2">Trust UGC more than Ads</span>
+              <div className="absolute -bottom-10 -left-10 w-44 h-44 bg-blue-600 text-white p-6 rounded-full flex flex-col items-center justify-center text-center shadow-2xl font-black animate-bounce-subtle z-20">
+                <span className="text-4xl">100%</span>
+                <span className="text-[10px] uppercase tracking-tighter leading-tight mt-2">Authentic Human <br/> Connection</span>
               </div>
             </div>
           </div>

@@ -6,7 +6,6 @@ import ResultsBanner from './components/ResultsBanner.tsx';
 import About from './components/About.tsx';
 import Services from './components/Services.tsx';
 import Process from './components/Process.tsx';
-import PerformanceAds from './components/PerformanceAds.tsx';
 import UGCExplanation from './components/UGCExplanation.tsx';
 import Portfolio from './components/Portfolio.tsx';
 import Testimonials from './components/Testimonials.tsx';
@@ -30,8 +29,6 @@ const App: React.FC = () => {
       observer.observe(el);
     });
 
-    // Safety timeout: if observer hasn't triggered visibility after 2 seconds, 
-    // force show everything just in case.
     const safetyTimer = setTimeout(() => {
       document.body.classList.add('reveal-fallback');
     }, 2000);
@@ -59,7 +56,6 @@ const App: React.FC = () => {
         <section id="process" className="scroll-mt-20">
           <Process />
         </section>
-        <PerformanceAds />
         <UGCExplanation />
         <section id="portfolio" className="scroll-mt-20">
           <Portfolio />

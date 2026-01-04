@@ -37,43 +37,35 @@ export const SERVICES: ServiceItem[] = [
 ];
 
 export const PORTFOLIO_ITEMS: PortfolioItem[] = [
-  // Category 1: UGC Shorts (Real Voices & Influence) - Using Cloudinary Direct Links
-  { 
-    id: 'ugc-cloudinary-1', 
-    title: 'D2C Marketing Excellence', 
-    category: 'UGC Shorts', 
-    tag: 'Marketing', 
-    imageUrl: 'https://res.cloudinary.com/djwiyyxkm/video/upload/v1767486993/d2cwithgirish_short_kibhjg.mp4', 
-    type: 'video' 
-  },
-  { 
-    id: 'ugc-cloudinary-2', 
-    title: 'Eagle Performance Motion', 
-    category: 'UGC Shorts', 
-    tag: 'Motion Graphics', 
-    imageUrl: 'https://res.cloudinary.com/djwiyyxkm/video/upload/v1767487004/eagle_08-11-25-2x-RIFE-RIFE4.0-120fps_vxdfam.mp4', 
-    type: 'video' 
-  },
-  { id: 'ugc-3', title: 'High-end Visual Storytelling', category: 'UGC Shorts', tag: '3D Animations', imageUrl: '1RNFR8gNkgUHEi4woaWU-ioqJDrSpOGUS', type: 'video' },
-  { id: 'ugc-4', title: 'Cabai Life Platform', category: 'UGC Shorts', tag: 'Lifestyle & Apps', imageUrl: '19ceiw1XITpoByXgQkgbQhw3TP7kvVKUc', type: 'video' },
+  // UGC Shorts
+  { id: 'ugc-1', title: 'QPO Max Car Mats', category: 'UGC Shorts', tag: 'Automotive UGC', imageUrl: 'https://res.cloudinary.com/djwiyyxkm/video/upload/v1767498268/Copy_of_Copy_of_QPO_MAX_CAR_MATS_MG_SAFARI_PR-2_FINAL_2_bm4wvq.mp4', type: 'video' },
+  { id: 'ugc-2', title: 'Void Craft Studios V2', category: 'UGC Shorts', tag: 'Studio UGC', imageUrl: 'https://res.cloudinary.com/djwiyyxkm/video/upload/v1767498272/12_NOV_VOID_CRAFT_V2_2_qy5brd.mp4', type: 'video' },
+  { id: 'ugc-3', title: 'D2C Marketing Short', category: 'UGC Shorts', tag: 'D2C Strategy', imageUrl: 'https://res.cloudinary.com/djwiyyxkm/video/upload/v1767498286/d2cwithgirish_short_1_el9ggw.mp4', type: 'video' },
+  { id: 'ugc-4', title: 'Coshot Visual V1', category: 'UGC Shorts', tag: 'Product UGC', imageUrl: 'https://res.cloudinary.com/djwiyyxkm/video/upload/v1767498279/17_nov_coshot_v1_1_cyqrkg.mp4', type: 'video' },
+  { id: 'ugc-5', title: 'Basttl Media Campaign', category: 'UGC Shorts', tag: 'Influencer Style', imageUrl: 'https://res.cloudinary.com/djwiyyxkm/video/upload/v1767498280/basttl_media_v1_1_rka8s3.mp4', type: 'video' },
+  { id: 'ugc-6', title: 'Cabai Ad Performance', category: 'UGC Shorts', tag: 'Conversion Focus', imageUrl: 'https://res.cloudinary.com/djwiyyxkm/video/upload/v1767498581/cabai-ad-2-only-triming_HrwPKTRi_gnzu0a.mp4', type: 'video' },
 
-  // Category 2: Product Shoot Projects
-  { id: 'prod-1', title: 'Instadekor Home Decor', category: 'Product Shoots', tag: 'Branding', imageUrl: '1BK4KyXkng0hGrAAUG6febKzxXmvlysZo', type: 'video' },
-  { id: 'prod-2', title: 'King Premium Snacks', category: 'Product Shoots', tag: 'Food & Taste', imageUrl: '1eGCrpeyFbDtfdw9JwiGa8Ksp5LuOLYct', type: 'video' },
-  { id: 'prod-3', title: 'Cabai Car Perfume', category: 'Product Shoots', tag: 'Car Accessories', imageUrl: '1Iv_C1igyoHOXDDTcnb98xAG2C_UCZjmy', type: 'video' },
-  { id: 'prod-4', title: 'Ozzo Performance Light', category: 'Product Shoots', tag: 'Lighting', imageUrl: '1RNFR8gNkgUHEi4woaWU-ioqJDrSpOGUS', type: 'video' },
+  // Product Shoots
+  { id: 'prod-1', title: 'Compressed Motion Shoot', category: 'Product Shoots', tag: 'Product Video', imageUrl: 'https://res.cloudinary.com/djwiyyxkm/video/upload/v1767497416/compressed-video_gljowe.mp4', type: 'video' },
+  { id: 'prod-2', title: 'Ganesh Ji Murti Show', category: 'Product Shoots', tag: 'Decor', imageUrl: 'https://res.cloudinary.com/djwiyyxkm/video/upload/v1767497449/ganesh_ji_murti_1_hx3atn.mp4', type: 'video' },
+  { id: 'prod-3', title: 'Instadekor Visual V1', category: 'Product Shoots', tag: 'Interior', imageUrl: 'https://res.cloudinary.com/djwiyyxkm/video/upload/v1767497473/19_NOV_INSTADEKOR_V1_1_n0ijrc.mp4', type: 'video' },
+  { id: 'prod-4', title: 'Instadekor Visual V3', category: 'Product Shoots', tag: 'Premium Decor', imageUrl: 'https://res.cloudinary.com/djwiyyxkm/video/upload/v1767497528/19_NOV_INSTADEKOR_3_V1_1_zb9z61.mp4', type: 'video' },
+  { id: 'prod-5', title: 'Trimurty V2 Showcase', category: 'Product Shoots', tag: 'Sculpture', imageUrl: 'https://res.cloudinary.com/djwiyyxkm/video/upload/v1767497535/13_NOV_TRIMURTY_V2_1_bmxmht.mp4', type: 'video' },
+  { id: 'prod-6', title: 'Buddha Murti Visual', category: 'Product Shoots', tag: 'Zen Decor', imageUrl: 'https://res.cloudinary.com/djwiyyxkm/video/upload/v1767497574/BUDDHA_ji_murti_1_jh76h1.mp4', type: 'video' },
 
-  // Category 3: Informative Automotive Projects
-  { id: 'auto-1', title: 'Tata Curvv: Coupe SUV', category: 'Automotive', tag: 'Market Leader', imageUrl: '1TynCPvLeQB_i2NZ91WawXCEEDLfd36TR', type: 'video' },
-  { id: 'auto-2', title: 'Tata Sierra: Deep Dive', category: 'Automotive', tag: 'Upcoming 2025', imageUrl: '1gq2Txru6XnAmdNwOOhD-0_0GvDV6dJ3D', type: 'video' },
-  { id: 'auto-3', title: 'Xiaomi SU7 / YUZ Max', category: 'Automotive', tag: 'High-Tech EV', imageUrl: '1zxMt13dNcUyQfaIdMyjSTzDssu_-NU7p', type: 'video' },
-  { id: 'auto-4', title: 'Top 5 Best Selling Cars', category: 'Automotive', tag: 'September 2025', imageUrl: '1bcTKLP073qqwbeknYZvt3esBaGQqEI08', type: 'video' },
-  { id: 'auto-5', title: 'Top 5 Affordable Diesel', category: 'Automotive', tag: 'Market Insight', imageUrl: '1lN8vk8JPwJ6G1az4dngVnI1AGORZBOjt', type: 'video' },
-  { id: 'auto-6', title: 'Hyundai Venue vs Brezza', category: 'Automotive', tag: 'Budget SUV', imageUrl: '1iMzi5CYjWQn32kWgqrYHzYkWGiG6wL_Z', type: 'video' },
+  // Informative
+  { id: 'info-1', title: 'Basttl Auto KTM Review', category: 'Informative', tag: 'Automotive Info', imageUrl: 'https://res.cloudinary.com/djwiyyxkm/video/upload/v1767496447/basttl_auto_ktm_1_j5a4r9.mp4', type: 'video' },
+  { id: 'info-2', title: 'GST AutoIndia Guide', category: 'Informative', tag: 'Tax Guide', imageUrl: 'https://res.cloudinary.com/djwiyyxkm/video/upload/v1767496453/gst_autoindia_1_zin1md.mp4', type: 'video' },
+  { id: 'info-3', title: 'Auto India Update 2025', category: 'Informative', tag: 'Latest News', imageUrl: 'https://res.cloudinary.com/djwiyyxkm/video/upload/v1767496467/auto_india_03-09-2025_1_n4wnxe.mp4', type: 'video' },
+  { id: 'info-4', title: 'Auto India Oct 28 Short', category: 'Informative', tag: 'Market Insights', imageUrl: 'https://res.cloudinary.com/djwiyyxkm/video/upload/v1767496484/auto_india_short_28-10-2025_1_w8yy26.mp4', type: 'video' },
+  { id: 'info-5', title: 'Best Selling Cars Sept', category: 'Informative', tag: 'Data Focus', imageUrl: 'https://res.cloudinary.com/djwiyyxkm/video/upload/v1767496490/top_5_best_selling_cars_sep.2025.mp4_short_1_1_f3ijrc.mp4', type: 'video' },
+  { id: 'info-6', title: 'Top 6 November Cars', category: 'Informative', tag: 'Auto Review', imageUrl: 'https://res.cloudinary.com/djwiyyxkm/video/upload/v1767496492/Top_6_november_-_auto_india_31-10-2025_1_dktalr.mp4', type: 'video' },
 
-  // Category 4: Graphics
-  { id: 'graph-1', title: 'Cabai Redefining Freshness', category: 'Graphics', tag: 'Car Perfume', imageUrl: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800', type: 'image' },
-  { id: 'graph-2', title: 'Ozzo Surface Light Ads', category: 'Graphics', tag: 'Lighting Design', imageUrl: 'https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&q=80&w=800', type: 'image' },
-  { id: 'graph-3', title: 'King Almond Badam Pack', category: 'Graphics', tag: 'FMCG Design', imageUrl: 'https://images.unsplash.com/photo-1504470695779-75300268aa0e?auto=format&fit=crop&q=80&w=800', type: 'image' },
-  { id: 'graph-4', title: 'Vgyapun Black Friday', category: 'Graphics', tag: 'Billboard', imageUrl: 'https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&q=80&w=800', type: 'image' },
+  // Graphic
+  { id: 'graph-1', title: 'Premium Branding Asset 1', category: 'Graphic', tag: 'Brand Identity', imageUrl: 'https://res.cloudinary.com/djwiyyxkm/image/upload/v1767494330/1_kupej1.png', type: 'image' },
+  { id: 'graph-2', title: 'Social Media Graphic 3', category: 'Graphic', tag: 'Ad Design', imageUrl: 'https://res.cloudinary.com/djwiyyxkm/image/upload/v1767494327/3_usd8rg.png', type: 'image' },
+  { id: 'graph-3', title: 'Product Layout 5', category: 'Graphic', tag: 'D2C Layout', imageUrl: 'https://res.cloudinary.com/djwiyyxkm/image/upload/v1767494325/5_ltmoa7.png', type: 'image' },
+  { id: 'graph-4', title: 'Minimalist Poster 2', category: 'Graphic', tag: 'Clean Design', imageUrl: 'https://res.cloudinary.com/djwiyyxkm/image/upload/v1767494325/2_gz6ilc.png', type: 'image' },
+  { id: 'graph-5', title: 'Typography Concept 6', category: 'Graphic', tag: 'Modern Type', imageUrl: 'https://res.cloudinary.com/djwiyyxkm/image/upload/v1767494325/6_zjrz4r.png', type: 'image' },
+  { id: 'graph-6', title: 'Visual Ad Asset 4', category: 'Graphic', tag: 'Conversion Ad', imageUrl: 'https://res.cloudinary.com/djwiyyxkm/image/upload/v1767494325/4_baf0e5.png', type: 'image' },
 ];
