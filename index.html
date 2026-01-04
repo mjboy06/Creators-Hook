@@ -38,10 +38,16 @@
         opacity: 0;
         transform: translateY(30px);
         transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+        will-change: opacity, transform;
       }
       .reveal.active {
         opacity: 1;
         transform: translateY(0);
+      }
+      /* Safety fallback: if JS fails to add .active, show content anyway */
+      .reveal-fallback .reveal {
+        opacity: 1 !important;
+        transform: none !important;
       }
       .watermark-bg {
         background-image: url('https://i.postimg.cc/FfTdp86J/All-Logos-(48).png');
@@ -74,5 +80,6 @@
   </head>
   <body>
     <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
   </body>
 </html>

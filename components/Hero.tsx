@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { PORTFOLIO_ITEMS } from '../constants';
+import { PORTFOLIO_ITEMS } from '../constants.tsx';
 
 const Hero: React.FC = () => {
   // Use the specific Cloudinary links for the high-speed strip

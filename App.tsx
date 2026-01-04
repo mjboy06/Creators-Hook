@@ -1,18 +1,18 @@
 
 import React, { useEffect } from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import ResultsBanner from './components/ResultsBanner';
-import About from './components/About';
-import Services from './components/Services';
-import Process from './components/Process';
-import PerformanceAds from './components/PerformanceAds';
-import UGCExplanation from './components/UGCExplanation';
-import Portfolio from './components/Portfolio';
-import Testimonials from './components/Testimonials';
-import FAQ from './components/FAQ';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import Navbar from './components/Navbar.tsx';
+import Hero from './components/Hero.tsx';
+import ResultsBanner from './components/ResultsBanner.tsx';
+import About from './components/About.tsx';
+import Services from './components/Services.tsx';
+import Process from './components/Process.tsx';
+import PerformanceAds from './components/PerformanceAds.tsx';
+import UGCExplanation from './components/UGCExplanation.tsx';
+import Portfolio from './components/Portfolio.tsx';
+import Testimonials from './components/Testimonials.tsx';
+import FAQ from './components/FAQ.tsx';
+import Contact from './components/Contact.tsx';
+import Footer from './components/Footer.tsx';
 
 const App: React.FC = () => {
   useEffect(() => {
@@ -30,7 +30,16 @@ const App: React.FC = () => {
       observer.observe(el);
     });
 
-    return () => observer.disconnect();
+    // Safety timeout: if observer hasn't triggered visibility after 2 seconds, 
+    // force show everything just in case.
+    const safetyTimer = setTimeout(() => {
+      document.body.classList.add('reveal-fallback');
+    }, 2000);
+
+    return () => {
+      observer.disconnect();
+      clearTimeout(safetyTimer);
+    };
   }, []);
 
   return (

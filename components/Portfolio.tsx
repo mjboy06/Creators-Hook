@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { PORTFOLIO_ITEMS } from '../constants';
+import { PORTFOLIO_ITEMS } from '../constants.tsx';
 
 const Portfolio: React.FC = () => {
   const [filter, setFilter] = useState('All');

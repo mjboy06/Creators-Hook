@@ -1,5 +1,5 @@
 
-import { PortfolioItem, ServiceItem } from './types';
+import { PortfolioItem, ServiceItem } from './types.ts';
 
 export const COLORS = {
   primaryBlue: '#2563eb',
