@@ -77,7 +77,7 @@ const Portfolio: React.FC = () => {
               onClick={() => setSelectedItem(item)}
               className="group cursor-pointer relative overflow-hidden rounded-[2rem] sm:rounded-[3.5rem] bg-white border border-slate-100 shadow-sm transition-all duration-700 reveal-item hover:-translate-y-4 hover:shadow-[0_40px_80px_-20px_rgba(37,99,235,0.2)]"
             >
-              <div className="aspect-[4/5] overflow-hidden bg-[#0f172a]">
+              <div className="aspect-[9/16] overflow-hidden bg-[#0f172a]">
                 {item.type === 'video' ? (
                   <video 
                     src={item.imageUrl}
