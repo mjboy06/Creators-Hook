@@ -22,17 +22,17 @@ export const SERVICES: ServiceItem[] = [
   {
     title: 'Graphic Projects',
     description: 'Striking visuals that define brand authority.',
-    points: ['Social Media Posts', 'Product Shoots', 'Brand Identity Design']
+    points: ['Social Media Posts', 'Brand Identity Design', 'YouTube Thumbnails']
   },
   {
     title: 'UGC Content',
     description: 'Authentic connection through real storytelling.',
-    points: ['User-Generated Reviews', '3D Animations', 'Visual Storytelling']
+    points: ['User-Generated Reviews', 'Visual Storytelling', 'Product Walkthroughs']
   },
   {
     title: 'Video Creatives',
     description: 'Engaging motion content for the digital age.',
-    points: ['YouTube Thumbnails', 'Short-form Reels', 'Automotive Long-form']
+    points: ['Short-form Reels', 'Long form videos', 'Product Shoots']
   }
 ];
 

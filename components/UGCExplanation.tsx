@@ -15,7 +15,7 @@ const UGCExplanation: React.FC = () => {
     },
     {
       title: "Where Are UGC Ads Used?",
-      content: "UGC ads are used across TikTok, Instagram, Facebook, YouTube Shorts, Snapchat, and landing pages. Anywhere your audience scrolls — UGC wins."
+      content: "UGC ads are used across Instagram, Facebook, YouTube Shorts, Snapchat, and landing pages. Anywhere your audience scrolls — UGC wins."
     }
   ];
 

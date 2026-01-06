@@ -25,7 +25,7 @@ const Process: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-20">
           <span className="text-blue-500 font-bold uppercase tracking-[0.3em] text-xs mb-4 block">Our Formula</span>
-          <h2 className="text-4xl md:text-5xl font-black">How We Hook Your <span className="text-blue-500">Customers.</span></h2>
+          <h2 className="text-4xl md:text-5xl font-black">How We Hook Your <span className="text-blue-500">Customers?</span></h2>
         </div>
 
         <div className="grid md:grid-cols-3 gap-12 relative">

@@ -12,8 +12,12 @@ const Hero: React.FC = () => {
 
   return (
     <section className="relative pt-32 sm:pt-48 pb-12 sm:pb-20 bg-white overflow-hidden" id="home">
-      <div className="absolute inset-0 z-0 influencer-texture"></div>
-      <div className="absolute inset-0 z-0 watermark-bg"></div>
+      {/* Background Image Overlay */}
+      <div 
+        className="absolute inset-0 z-0 opacity-10 pointer-events-none bg-cover bg-center"
+        style={{ backgroundImage: `url('https://res.cloudinary.com/djwiyyxkm/image/upload/v1767701219/Untitled_design_-_2026-01-06T173638.692_qkbwsm.png')` }}
+      ></div>
+      <div className="absolute inset-0 z-0 watermark-bg opacity-[0.02]"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center mb-16 sm:mb-24 relative z-10">
         <div className="inline-block px-4 sm:px-5 py-1.5 sm:py-2 bg-blue-50 text-blue-600 rounded-full text-[10px] sm:text-xs font-black mb-6 sm:mb-8 tracking-[0.2em] border border-blue-100 uppercase">
@@ -21,12 +25,12 @@ const Hero: React.FC = () => {
         </div>
         
         <h1 className="text-4xl sm:text-5xl md:text-[6.5rem] font-black text-[#0f172a] leading-[1] mb-6 sm:mb-10 tracking-tighter max-w-5xl mx-auto px-2">
-          UGC That Turns <br className="hidden sm:block"/> 
+          UGC Ads That Turn <br className="hidden sm:block"/> 
           Attention into <span className="text-blue-600 italic">Revenue.</span>
         </h1>
         
         <p className="text-base sm:text-xl md:text-2xl text-slate-500 max-w-3xl mx-auto mb-10 sm:mb-16 font-medium leading-relaxed px-4">
-          We create high-converting UGC ads using real creators to help ecommerce brands scale profitably across TikTok, Meta, and YouTube.
+          We create high-converting UGC ads using real creators to help ecommerce brands scale profitably across Instagram, Meta, and YouTube.
         </p>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
