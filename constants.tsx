@@ -27,7 +27,7 @@ export const SERVICES: ServiceItem[] = [
   {
     title: 'UGC Content',
     description: 'Authentic connection through real storytelling.',
-    points: ['User-Generated Reviews', 'Visual Storytelling', 'Product Walkthroughs']
+    points: ['User-Generated Reviews', 'Visual Storytelling', 'Short-Form UGC Reels']
   },
   {
     title: 'Video Creatives',

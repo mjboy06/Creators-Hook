@@ -4,6 +4,7 @@ import Navbar from './components/Navbar.tsx';
 import Hero from './components/Hero.tsx';
 import ResultsBanner from './components/ResultsBanner.tsx';
 import About from './components/About.tsx';
+import TrustedBy from './components/TrustedBy.tsx';
 import Services from './components/Services.tsx';
 import Process from './components/Process.tsx';
 import UGCExplanation from './components/UGCExplanation.tsx';
@@ -50,6 +51,7 @@ const App: React.FC = () => {
         <section id="about" className="scroll-mt-20">
           <About />
         </section>
+        <TrustedBy />
         <section id="services" className="scroll-mt-20">
           <Services />
         </section>

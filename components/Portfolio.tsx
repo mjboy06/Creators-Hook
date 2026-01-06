@@ -36,8 +36,11 @@ const Portfolio: React.FC = () => {
 
   const filteredItems = useMemo(() => {
     if (filter === 'All') {
-      // Pick 9 random items from different categories for diversity
-      return [...PORTFOLIO_ITEMS].sort(() => 0.5 - Math.random()).slice(0, 9);
+      // Show only video content in the "All" view
+      return PORTFOLIO_ITEMS
+        .filter(item => item.type === 'video')
+        .sort(() => 0.5 - Math.random())
+        .slice(0, 9);
     }
     return PORTFOLIO_ITEMS.filter(item => item.category === filter);
   }, [filter]);
@@ -95,7 +98,6 @@ const Portfolio: React.FC = () => {
                   />
                 )}
               </div>
-              {/* Overlay: Removed title, tag and play button as requested */}
               <div className="absolute inset-0 bg-blue-600/10 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
             </div>
           ))}
