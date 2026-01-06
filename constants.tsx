@@ -67,5 +67,5 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   { id: 'graph-3', title: 'Product Layout 5', category: 'Graphic', tag: 'D2C Layout', imageUrl: 'https://res.cloudinary.com/djwiyyxkm/image/upload/v1767494325/5_ltmoa7.png', type: 'image' },
   { id: 'graph-4', title: 'Minimalist Poster 2', category: 'Graphic', tag: 'Clean Design', imageUrl: 'https://res.cloudinary.com/djwiyyxkm/image/upload/v1767494325/2_gz6ilc.png', type: 'image' },
   { id: 'graph-5', title: 'Typography Concept 6', category: 'Graphic', tag: 'Modern Type', imageUrl: 'https://res.cloudinary.com/djwiyyxkm/image/upload/v1767494325/6_zjrz4r.png', type: 'image' },
-  { id: 'graph-6', title: 'Visual Ad Asset 4', category: 'Graphic', tag: 'Conversion Ad', imageUrl: 'https://res.cloudinary.com/djwiyyxkm/image/upload/v1767494325/4_baf0e5.png', type: 'image' },
+  { id: 'graph-6', title: 'Visual Ad Asset 4', category: 'Graphic', tag: 'Conversion Ad', imageUrl: 'https://res.cloudinary.com/djwiyyxkm/image/upload/v1767709464/Untitled_design_-_2026-01-06T195416.148_rpdwzf.png', type: 'image' },
 ];
