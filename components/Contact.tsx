@@ -1,16 +1,40 @@
 
-import React from 'react';
+import React, { useState } from 'react';
+import { supabase } from '../lib/supabase.ts';
 
 const Contact: React.FC = () => {
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const formData = new FormData(e.target as HTMLFormElement);
-    const data = Object.fromEntries(formData.entries());
-    
-    const subject = encodeURIComponent(`New Inquiry from ${data.name}`);
-    const body = encodeURIComponent(`Name: ${data.name}\nEmail: ${data.email}\nCompany: ${data.company}\nMessage: ${data.message}`);
-    
-    window.location.href = `mailto:creatorshookofficial@gmail.com?subject=${subject}&body=${body}`;
+    setIsLoading(true);
+    setError(null);
+
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      company: formData.get('company'),
+      message: formData.get('message'),
+    };
+
+    try {
+      const { error: supabaseError } = await supabase
+        .from('inquiries')
+        .insert([data]);
+
+      if (supabaseError) throw supabaseError;
+
+      setIsSubmitted(true);
+      console.log('Inquiry submitted to Supabase successfully');
+    } catch (err: any) {
+      console.error('Error submitting inquiry:', err);
+      setError(err.message || 'Something went wrong. Please try again.');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -55,31 +79,66 @@ const Contact: React.FC = () => {
             </div>
           </div>
 
-          <div className="bg-slate-50 p-8 sm:p-12 md:p-16 rounded-[2.5rem] sm:rounded-[4rem] border border-slate-100 shadow-sm reveal-item w-full">
-            <h3 className="text-2xl sm:text-4xl font-black mb-8 sm:mb-10 text-[#0f172a]">Get a Free Quote</h3>
-            <form className="space-y-6 sm:space-y-8" onSubmit={handleSubmit}>
-              <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
-                <div className="space-y-2 sm:space-y-3">
-                  <label className="text-[10px] sm:text-xs font-black text-slate-500 uppercase tracking-widest ml-1">Full Name</label>
-                  <input name="name" required type="text" className="w-full px-6 sm:px-8 py-4 sm:py-5 bg-white rounded-2xl sm:rounded-3xl border border-slate-200 focus:border-blue-600 outline-none transition-all shadow-sm text-sm" placeholder="John Doe" />
+          <div className="bg-slate-50 p-8 sm:p-12 md:p-16 rounded-[2.5rem] sm:rounded-[4rem] border border-slate-100 shadow-sm reveal-item w-full min-h-[500px] flex flex-col justify-center transition-all duration-500">
+            {isSubmitted ? (
+              <div className="text-center animate-fade-in">
+                <div className="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-8">
+                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7"></path></svg>
                 </div>
-                <div className="space-y-2 sm:space-y-3">
-                  <label className="text-[10px] sm:text-xs font-black text-slate-500 uppercase tracking-widest ml-1">Email</label>
-                  <input name="email" required type="email" className="w-full px-6 sm:px-8 py-4 sm:py-5 bg-white rounded-2xl sm:rounded-3xl border border-slate-200 focus:border-blue-600 outline-none transition-all shadow-sm text-sm" placeholder="john@brand.com" />
-                </div>
+                <h3 className="text-3xl font-black text-[#0f172a] mb-4">Inquiry Received!</h3>
+                <p className="text-slate-500 font-medium">Thank you for reaching out. Our strategy team will review your details and get back to you within 24 hours.</p>
+                <button 
+                  onClick={() => setIsSubmitted(false)}
+                  className="mt-10 text-blue-600 font-bold text-sm uppercase tracking-widest hover:underline"
+                >
+                  Send another inquiry
+                </button>
               </div>
-              <div className="space-y-2 sm:space-y-3">
-                <label className="text-[10px] sm:text-xs font-black text-slate-500 uppercase tracking-widest ml-1">Company / Brand</label>
-                <input name="company" type="text" className="w-full px-6 sm:px-8 py-4 sm:py-5 bg-white rounded-2xl sm:rounded-3xl border border-slate-200 focus:border-blue-600 outline-none transition-all shadow-sm text-sm" placeholder="Your Amazing Brand" />
-              </div>
-              <div className="space-y-2 sm:space-y-3">
-                <label className="text-[10px] sm:text-xs font-black text-slate-500 uppercase tracking-widest ml-1">Inquiry Details</label>
-                <textarea name="message" required rows={4} className="w-full px-6 sm:px-8 py-4 sm:py-5 bg-white rounded-2xl sm:rounded-3xl border border-slate-200 focus:border-blue-600 outline-none transition-all resize-none shadow-sm text-sm" placeholder="Tell us what you're building..."></textarea>
-              </div>
-              <button className="w-full bg-blue-600 text-white py-5 sm:py-6 rounded-2xl sm:rounded-3xl font-black text-base sm:text-lg hover:bg-blue-700 transition-all shadow-2xl shadow-blue-500/25 active:scale-95">
-                SUBMIT INQUIRY
-              </button>
-            </form>
+            ) : (
+              <>
+                <h3 className="text-2xl sm:text-4xl font-black mb-8 sm:mb-10 text-[#0f172a]">Get a Free Quote</h3>
+                <form className="space-y-6 sm:space-y-8" onSubmit={handleSubmit}>
+                  {error && (
+                    <div className="p-4 bg-red-50 text-red-600 rounded-2xl text-sm font-bold border border-red-100">
+                      {error}
+                    </div>
+                  )}
+                  <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
+                    <div className="space-y-2 sm:space-y-3">
+                      <label className="text-[10px] sm:text-xs font-black text-slate-500 uppercase tracking-widest ml-1">Full Name</label>
+                      <input name="name" required type="text" className="w-full px-6 sm:px-8 py-4 sm:py-5 bg-white rounded-2xl sm:rounded-3xl border border-slate-200 focus:border-blue-600 outline-none transition-all shadow-sm text-sm" placeholder="John Doe" disabled={isLoading} />
+                    </div>
+                    <div className="space-y-2 sm:space-y-3">
+                      <label className="text-[10px] sm:text-xs font-black text-slate-500 uppercase tracking-widest ml-1">Email</label>
+                      <input name="email" required type="email" className="w-full px-6 sm:px-8 py-4 sm:py-5 bg-white rounded-2xl sm:rounded-3xl border border-slate-200 focus:border-blue-600 outline-none transition-all shadow-sm text-sm" placeholder="john@brand.com" disabled={isLoading} />
+                    </div>
+                  </div>
+                  <div className="space-y-2 sm:space-y-3">
+                    <label className="text-[10px] sm:text-xs font-black text-slate-500 uppercase tracking-widest ml-1">Company / Brand</label>
+                    <input name="company" type="text" className="w-full px-6 sm:px-8 py-4 sm:py-5 bg-white rounded-2xl sm:rounded-3xl border border-slate-200 focus:border-blue-600 outline-none transition-all shadow-sm text-sm" placeholder="Your Amazing Brand" disabled={isLoading} />
+                  </div>
+                  <div className="space-y-2 sm:space-y-3">
+                    <label className="text-[10px] sm:text-xs font-black text-slate-500 uppercase tracking-widest ml-1">Inquiry Details</label>
+                    <textarea name="message" required rows={4} className="w-full px-6 sm:px-8 py-4 sm:py-5 bg-white rounded-2xl sm:rounded-3xl border border-slate-200 focus:border-blue-600 outline-none transition-all resize-none shadow-sm text-sm" placeholder="Tell us what you're building..." disabled={isLoading}></textarea>
+                  </div>
+                  <button 
+                    type="submit" 
+                    disabled={isLoading}
+                    className={`w-full bg-blue-600 text-white py-5 sm:py-6 rounded-2xl sm:rounded-3xl font-black text-base sm:text-lg transition-all shadow-2xl shadow-blue-500/25 active:scale-95 flex items-center justify-center gap-3 ${isLoading ? 'opacity-70 cursor-not-allowed' : 'hover:bg-blue-700'}`}
+                  >
+                    {isLoading ? (
+                      <>
+                        <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        PROCESSING...
+                      </>
+                    ) : 'SUBMIT INQUIRY'}
+                  </button>
+                </form>
+              </>
+            )}
           </div>
         </div>
       </div>
