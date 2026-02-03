@@ -3,11 +3,12 @@ import React from 'react';
 
 const Hero: React.FC = () => {
   const heroVideos = [
-    "https://res.cloudinary.com/djwiyyxkm/video/upload/v1767498268/Copy_of_Copy_of_QPO_MAX_CAR_MATS_MG_SAFARI_PR-2_FINAL_2_bm4wvq.mp4",
-    "https://res.cloudinary.com/djwiyyxkm/video/upload/v1767498272/12_NOV_VOID_CRAFT_V2_2_qy5brd.mp4",
-    "https://res.cloudinary.com/djwiyyxkm/video/upload/v1767497416/compressed-video_gljowe.mp4",
-    "https://res.cloudinary.com/djwiyyxkm/video/upload/v1767496447/basttl_auto_ktm_1_j5a4r9.mp4",
-    "https://res.cloudinary.com/djwiyyxkm/video/upload/v1767498286/d2cwithgirish_short_1_el9ggw.mp4"
+    "https://www.dropbox.com/scl/fi/kl76yujjb73g0ud7dimy4/cabai-ad-2-only-triming_HrwPKTRi_gnzu0a.mp4?rlkey=jysy2q6jo5om4jje7ghhe656g&st=ebbbhcxj&raw=1",
+    "https://www.dropbox.com/scl/fi/ysxofvhegxpcabelop0j1/17_nov_coshot_v1_1_cyqrkg.mp4?rlkey=p3mo9u2afgwmo5mdy6uv2huc3&st=xhu3kjxq&raw=1",
+    "https://www.dropbox.com/scl/fi/pkhe7rw8f1p8tgbyfgat4/d2cwithgirish_short_1_el9ggw.mp4?rlkey=gqac957aa5myp37kweah4ohkh&st=a6rctdyn&raw=1",
+    "https://www.dropbox.com/scl/fi/dtcmqsnt65sqikvm1bpel/compressed-video_gljowe.mp4?rlkey=bwnvz8wfcq2u691c2kwz90i7e&st=x7itulni&raw=1",
+    "https://www.dropbox.com/scl/fi/1q8yb7rydu1wcbgkr97uv/12_NOV_VOID_CRAFT_V2_2_qy5brd.mp4?rlkey=84xyczqfmvwnny6upliq2h0em&st=193lrxy2&raw=1",
+    "https://www.dropbox.com/scl/fi/s301mm74sn52a5siv139t/Copy_of_Copy_of_QPO_MAX_CAR_MATS_MG_SAFARI_PR-2_FINAL_2_bm4wvq.mp4?rlkey=0w77kyivavbfg357g0bjhyuc9&st=3jrjxm24&raw=1"
   ];
 
   return (
@@ -15,7 +16,7 @@ const Hero: React.FC = () => {
       {/* Background Image Overlay */}
       <div 
         className="absolute inset-0 z-0 opacity-10 pointer-events-none bg-cover bg-center"
-        style={{ backgroundImage: `url('https://res.cloudinary.com/djwiyyxkm/image/upload/v1767701219/Untitled_design_-_2026-01-06T173638.692_qkbwsm.png')` }}
+        style={{ backgroundImage: `url('https://www.dropbox.com/scl/fi/iej9o7rn1mwerwucfmfaw/All-Logos-49.png?rlkey=r4u53du2g408s0vva25koryp9&st=v7zw5li4&raw=1')` }}
       ></div>
       <div className="absolute inset-0 z-0 watermark-bg opacity-[0.02]"></div>
       

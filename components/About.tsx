@@ -9,7 +9,7 @@ const About: React.FC = () => {
           <div className="relative reveal-item order-2 lg:order-1">
             <div className="aspect-[4/5] md:aspect-square rounded-[3rem] sm:rounded-[4rem] bg-slate-50 overflow-hidden relative shadow-2xl group">
                <img 
-                 src="https://res.cloudinary.com/djwiyyxkm/image/upload/v1767498712/All_Logos_49_vq7nbd.png" 
+                 src="https://www.dropbox.com/scl/fi/iej9o7rn1mwerwucfmfaw/All-Logos-49.png?rlkey=r4u53du2g408s0vva25koryp9&st=v7zw5li4&raw=1" 
                  alt="Creators Hook Brand Growth" 
                  className="w-full h-full object-contain p-8 sm:p-16 group-hover:scale-105 transition-transform duration-1000" 
                />

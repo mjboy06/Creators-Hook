@@ -36,7 +36,7 @@ const Navbar: React.FC = () => {
             }}
           >
             <img 
-              src="https://res.cloudinary.com/djwiyyxkm/image/upload/v1767700942/creators_hook_2_kuiltt.png" 
+              src="https://www.dropbox.com/scl/fi/d4yqboftz49c6adx8p6wi/creators-hook-2.png?rlkey=zllzysemgx5qu3ytd0yj25k9i&st=w5wbe071&raw=1" 
               alt="Creators Hook Logo" 
               className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
             />
