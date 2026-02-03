@@ -16,10 +16,10 @@ const TrustedBy: React.FC = () => {
     "https://www.dropbox.com/scl/fi/80appz71yh6ohaqt9418p/67.png?rlkey=i2hwzkcjaa6xhb0x79y56w6wf&st=tlpw7tch&raw=1"
   ];
 
-  // Row 2: Left Side (9 logos)
+  // Row 2: Left Side (9 logos) - Starts with Norwell (66)
   const row2 = [
-    "https://www.dropbox.com/scl/fi/t2ra183w8f7y8vai7rva7/66.png?rlkey=wctfx5r79hds2uge1rxmthlps&st=7t6zrsx9&raw=1", // Norwell
-    "https://www.dropbox.com/scl/fi/zuzrtmuc18jhzkhdtkizi/64.png?rlkey=6rrqumvtfeh4tekcjxpjwsutc&st=4583wx6t&raw=1", // 64
+    "https://www.dropbox.com/scl/fi/t2ra183w8f7y8vai7rva7/66.png?rlkey=wctfx5r79hds2uge1rxmthlps&st=7t6zrsx9&raw=1", // Norwell Logo
+    "https://www.dropbox.com/scl/fi/zuzrtmuc18jhzkhdtkizi/64.png?rlkey=6rrqumvtfeh4tekcjxpjwsutc&st=4583wx6t&raw=1", 
     "https://www.dropbox.com/scl/fi/h3jgkhpw1l7tm0e3nfzq5/48.png?rlkey=mtd5bzbo2mapochshazo16rhm&st=j6d3w0xy&raw=1",
     "https://www.dropbox.com/scl/fi/mvpywxymff5jsxxahd92v/49.png?rlkey=twaom7a1dkz5bwvxwm2sjlev0&st=uduzbwm7&raw=1",
     "https://www.dropbox.com/scl/fi/lr65akxk9fp131xau6mil/50.png?rlkey=bs09cem2s51haqy61c4xebloc&st=pb2knbnt&raw=1",
@@ -29,13 +29,12 @@ const TrustedBy: React.FC = () => {
     "https://www.dropbox.com/scl/fi/dxhz95cu103y657xqv78j/54.png?rlkey=sr7c0pzsj5c5srvoz6rqw5bs9&st=5qbczur5&raw=1"
   ];
 
-  // Row 3: Right Side (10 logos)
+  // Row 3: Right Side (9 logos)
   const row3 = [
     "https://www.dropbox.com/scl/fi/z7orztkk8whlozfa13gz5/55.png?rlkey=uqwnu94xy0me1o0tdnt61165x&st=wxgxwga3&raw=1",
-    "https://www.dropbox.com/scl/fi/5sjut0pkj2qi6nl9bfj28/56.png?rlkey=k3nifgabqxzjtnl45gwtawnx2&st=d24x206y&raw=1",
     "https://www.dropbox.com/scl/fi/mev1i3qt2pyp16zy00ffh/57.png?rlkey=k4lnylqianqxm7i86hpol1oqb&st=wrywi3eo&raw=1",
     "https://www.dropbox.com/scl/fi/uw5qabmztqofuylse3aqu/58.png?rlkey=1fzoa9kot1lggmr5qzpjdnt7r&st=t91wyeek&raw=1",
-    "https://www.dropbox.com/scl/fi/xrmeloyh996k2nekvt9s2/64.png?rlkey=7zxzgnkh7hfa9462060g716qm&st=n46t5acg&raw=1",
+    "https://www.dropbox.com/scl/fi/xrmeloyh996k2nekvt9s2/64.png?rlkey=7zxzgnkh7hfa9462060g716qm&st=xwk9h77v&raw=1", // Newly added logo
     "https://www.dropbox.com/scl/fi/koizv9ajzqxqkb1u3619j/59.png?rlkey=286fnge6f3b0hu7yndi62i74s&st=qhtlcw3v&raw=1",
     "https://www.dropbox.com/scl/fi/dsp58fxdcdd0mwd2fwtym/60.png?rlkey=950uy77onm13bm66zi0n4n1u4&st=75tbfxeb&raw=1",
     "https://www.dropbox.com/scl/fi/6nrywxkenohca0bga27zp/61.png?rlkey=5c0wf24a0ppdcdlfy01sczeu1&st=g73fhla1&raw=1",
