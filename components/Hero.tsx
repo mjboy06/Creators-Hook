@@ -3,12 +3,12 @@ import React from 'react';
 
 const Hero: React.FC = () => {
   const heroVideos = [
-    "https://www.dropbox.com/scl/fi/kl76yujjb73g0ud7dimy4/cabai-ad-2-only-triming_HrwPKTRi_gnzu0a.mp4?rlkey=jysy2q6jo5om4jje7ghhe656g&st=ebbbhcxj&raw=1",
-    "https://www.dropbox.com/scl/fi/ysxofvhegxpcabelop0j1/17_nov_coshot_v1_1_cyqrkg.mp4?rlkey=p3mo9u2afgwmo5mdy6uv2huc3&st=xhu3kjxq&raw=1",
-    "https://www.dropbox.com/scl/fi/pkhe7rw8f1p8tgbyfgat4/d2cwithgirish_short_1_el9ggw.mp4?rlkey=gqac957aa5myp37kweah4ohkh&st=a6rctdyn&raw=1",
-    "https://www.dropbox.com/scl/fi/dtcmqsnt65sqikvm1bpel/compressed-video_gljowe.mp4?rlkey=bwnvz8wfcq2u691c2kwz90i7e&st=x7itulni&raw=1",
-    "https://www.dropbox.com/scl/fi/1q8yb7rydu1wcbgkr97uv/12_NOV_VOID_CRAFT_V2_2_qy5brd.mp4?rlkey=84xyczqfmvwnny6upliq2h0em&st=193lrxy2&raw=1",
-    "https://www.dropbox.com/scl/fi/s301mm74sn52a5siv139t/Copy_of_Copy_of_QPO_MAX_CAR_MATS_MG_SAFARI_PR-2_FINAL_2_bm4wvq.mp4?rlkey=0w77kyivavbfg357g0bjhyuc9&st=3jrjxm24&raw=1"
+    "https://www.dropbox.com/scl/fi/lhltyo3a6e7nnc6wmik8j/ugc-6.mp4?rlkey=2j4xt0ekx9vphqr2q9bzebui4&st=9a7fmti8&raw=1",
+    "https://www.dropbox.com/scl/fi/s2yrb6u1bp8q75hea4iow/UGC-5.mp4?rlkey=isyk8km3uu6n74z8cvyzi013a&st=vksb6rhn&raw=1",
+    "https://www.dropbox.com/scl/fi/jw8qyj9qvz0ju0zae39no/ugc-4.mp4?rlkey=snkswbncjegafykucd8uuhhf5&st=r6cbjq43&raw=1",
+    "https://www.dropbox.com/scl/fi/ugswlzr2ylufzohi32msq/in-6.mp4?rlkey=j8htm7jtry7u5spk7o5zlfv6h&st=9hl08hi6&raw=1",
+    "https://www.dropbox.com/scl/fi/3ls879db665hncowegutn/in-5.mp4?rlkey=jn5z1gho09nr3azddtj993o3p&st=s9h7458k&raw=1",
+    "https://www.dropbox.com/scl/fi/5lj0yar5c8xkm4zw87ath/in-4.mp4?rlkey=yrcy1oemsybfhww8l6c4miijz&st=33fskazx&raw=1"
   ];
 
   return (
