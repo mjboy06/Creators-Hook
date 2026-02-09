@@ -2,24 +2,44 @@
 import React from 'react';
 
 const TrustedBy: React.FC = () => {
-  // 31 Logos split into 3 rows
+  // New set of logos provided by the user
   const allLogos = [
-    "1TZJfbkviNq3bhOCp9itpm00og1_piCPR", "1dGF-wvh0jyPzT9xyI69uqe94KBkzrRyU", "1bPWtdPHNW3bXHdPJHf5BSLYgeP43jqOS",
-    "1dtdebru1bnXyhvtaWF_UNgSMOqCubwNR", "1Nr3otT2uNYkhplTg-RsoZ4WATfAzheaE", "1s5HnVMXHVDnK72aWugfgznGBtOYNxwYS",
-    "1-jxwDa3CdzuDhqh0YFLzGPi0qjZ7tmvk", "1CwA2WB9WXK1xfdz4vxbhv1POKjz1GbqF", "1vvUUUCAATCwX4EUk40Rtn_pqX7ZRimLw",
-    "1bKdFJSW7KmXYmJksNBs4MwvFC_UaifmN", "12fKfNDVxoWO2Z10tYe2CMWrJlwI4gnsL", "1gi5rDh3fk5kEeLr8U-oc8iirwHQ_kUzI",
-    "1rZkkWE9F3uS9D16Ncbdeyv4ESZJ9yrpm", "15C0MxyPHSg_a6-3MtoLB03SORtNkkwSz", "1HcNn7bc5ncN1gfuT2j2D4hEA6HnmcL3b",
-    "1ccgCEDCDyNmesMLw0-gT3vckV0Q6v-7E", "1LbIMiClhmDGQKarfU4D1FcMM0WtNww9C", "1BjUymL3m-9MZKnkZbEw-v_z19YwkyIT-",
-    "1RqCMevn2mi8h_xW31dqMoLm2dLUF5K9_", "17EMr8n0qm9ldTnWhJRSZNseClfqd6bO7", "13l8WRd5i6OY_Lqz2bI7CPqGreM_Ctr8z",
-    "193O8LurK1CF4nzqPbSMq4eknpVkknLGU", "1tYD1IrpE1KsaBD_b365Syw4IIDUz40DG", "17vh00BzAY7WEstkFAHSlKg2ivHO6naiM",
-    "10S6UrAK-X9nuOf13LHKvA4heqbOWG73n", "1Y6UI7BeomK5m7jz6M46Aw8nKEqbXfwP7", "1t19QEjMO-WJyV5_aiVc342SC6_OITrrM",
-    "1PojyG2LLfz1_OcyU4p8-VCH0CoU259mC", "13jecdQxWvee44pbRrjxVU8JPcRJIPVAf", "1jHGnz2_LXmFrtqg0WuPpJ0yIuzQ2vJkm",
-    "1fkncT58SlPivJkgWmr5Fwd-J-3u-R7Tf"
-  ].map(id => `https://drive.google.com/uc?export=view&id=${id}`);
+    "https://res.cloudinary.com/dzdfz5ron/image/upload/v1770638431/52_gsgfpa.png",
+    "https://res.cloudinary.com/dzdfz5ron/image/upload/v1770638430/47_pw1pot.png",
+    "https://res.cloudinary.com/dzdfz5ron/image/upload/v1770638429/53_pruk7e.png",
+    "https://res.cloudinary.com/dzdfz5ron/image/upload/v1770638429/51_vrnh2h.png",
+    "https://res.cloudinary.com/dzdfz5ron/image/upload/v1770638428/50_lcqxuz.png",
+    "https://res.cloudinary.com/dzdfz5ron/image/upload/v1770638428/54_tnbltb.png",
+    "https://res.cloudinary.com/dzdfz5ron/image/upload/v1770638426/55_asczpi.png",
+    "https://res.cloudinary.com/dzdfz5ron/image/upload/v1770638426/57_ynlif4.png",
+    "https://res.cloudinary.com/dzdfz5ron/image/upload/v1770638425/56_izyuiq.png",
+    "https://res.cloudinary.com/dzdfz5ron/image/upload/v1770638425/58_w18edw.png",
+    "https://res.cloudinary.com/dzdfz5ron/image/upload/v1770638424/64_lanyem.png",
+    "https://res.cloudinary.com/dzdfz5ron/image/upload/v1770638423/59_h1qqej.png",
+    "https://res.cloudinary.com/dzdfz5ron/image/upload/v1770638423/61_e7tiov.png",
+    "https://res.cloudinary.com/dzdfz5ron/image/upload/v1770638422/49_dpborc.png",
+    "https://res.cloudinary.com/dzdfz5ron/image/upload/v1770638422/48_wyjspe.png",
+    "https://res.cloudinary.com/dzdfz5ron/image/upload/v1770638421/60_nb2zgy.png",
+    "https://res.cloudinary.com/dzdfz5ron/image/upload/v1770638421/62_swrtr6.png",
+    "https://res.cloudinary.com/dzdfz5ron/image/upload/v1770638414/63_m6seug.png",
+    "https://res.cloudinary.com/dzdfz5ron/image/upload/v1770638420/68_m9rjuk.png",
+    "https://res.cloudinary.com/dzdfz5ron/image/upload/v1770638420/69_rve4al.png",
+    "https://res.cloudinary.com/dzdfz5ron/image/upload/v1770638419/67_rji9xw.png",
+    "https://res.cloudinary.com/dzdfz5ron/image/upload/v1770638419/73_gkli9o.png",
+    "https://res.cloudinary.com/dzdfz5ron/image/upload/v1770638418/66_tykqmw.png",
+    "https://res.cloudinary.com/dzdfz5ron/image/upload/v1770638418/72_jwogao.png",
+    "https://res.cloudinary.com/dzdfz5ron/image/upload/v1770638417/64_wrhq7d.png",
+    "https://res.cloudinary.com/dzdfz5ron/image/upload/v1770638417/70_hhb0vl.png",
+    "https://res.cloudinary.com/dzdfz5ron/image/upload/v1770638416/71_gkhq9n.png",
+    "https://res.cloudinary.com/dzdfz5ron/image/upload/v1770638415/75_ivqldl.png",
+    "https://res.cloudinary.com/dzdfz5ron/image/upload/v1770638415/65_bk8c83.png",
+    "https://res.cloudinary.com/dzdfz5ron/image/upload/v1770638414/74_xkfbxg.png",
+    "https://res.cloudinary.com/dzdfz5ron/image/upload/v1770638414/76_hhhebb.png"
+  ];
 
-  const row1 = allLogos.slice(0, 10);
-  const row2 = allLogos.slice(10, 21);
-  const row3 = allLogos.slice(21, 31);
+  const row1 = allLogos.slice(0, 11);
+  const row2 = allLogos.slice(11, 22);
+  const row3 = allLogos.slice(22, 31);
 
   return (
     <section className="py-20 bg-white overflow-hidden">
@@ -40,7 +60,7 @@ const TrustedBy: React.FC = () => {
                 <img 
                   src={logo} 
                   alt={`Partner Logo R1-${idx}`} 
-                  className="h-10 sm:h-16 w-auto object-contain grayscale hover:grayscale-0 hover:scale-110 transition-all duration-300"
+                  className="h-10 sm:h-16 w-auto object-contain hover:scale-110 transition-all duration-300"
                 />
               </div>
             ))}
@@ -55,7 +75,7 @@ const TrustedBy: React.FC = () => {
                 <img 
                   src={logo} 
                   alt={`Partner Logo R2-${idx}`} 
-                  className="h-10 sm:h-16 w-auto object-contain grayscale hover:grayscale-0 hover:scale-110 transition-all duration-300"
+                  className="h-10 sm:h-16 w-auto object-contain hover:scale-110 transition-all duration-300"
                 />
               </div>
             ))}
@@ -70,7 +90,7 @@ const TrustedBy: React.FC = () => {
                 <img 
                   src={logo} 
                   alt={`Partner Logo R3-${idx}`} 
-                  className="h-10 sm:h-16 w-auto object-contain grayscale hover:grayscale-0 hover:scale-110 transition-all duration-300"
+                  className="h-10 sm:h-16 w-auto object-contain hover:scale-110 transition-all duration-300"
                 />
               </div>
             ))}

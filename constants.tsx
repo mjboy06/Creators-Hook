@@ -54,11 +54,11 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   { id: 'info-5', title: 'Informative Clip 5', category: 'Informative', tag: 'Insight', imageUrl: 'https://player.cloudinary.com/embed/?cloud_name=dzdfz5ron&public_id=in_2_m5obcw', type: 'video' },
   { id: 'info-6', title: 'Informative Clip 6', category: 'Informative', tag: 'Insight', imageUrl: 'https://player.cloudinary.com/embed/?cloud_name=dzdfz5ron&public_id=in_3_wyriix', type: 'video' },
 
-  // Graphics (Direct Drive Images)
-  { id: 'graph-1', title: 'Creative Graphic 1', category: 'Graphic', tag: 'Design', imageUrl: 'https://drive.google.com/uc?export=view&id=1mVm8-4EwS3b8tWFdh0vgEkWFRbcCEN-k', type: 'image' },
-  { id: 'graph-2', title: 'Creative Graphic 2', category: 'Graphic', tag: 'Design', imageUrl: 'https://drive.google.com/uc?export=view&id=1R_RKQ66sFt-u8ePQ-_H8M9IGcbcDTRMp', type: 'image' },
-  { id: 'graph-3', title: 'Creative Graphic 3', category: 'Graphic', tag: 'Design', imageUrl: 'https://drive.google.com/uc?export=view&id=1X7-fIxdG8kBRZpZm9UZVt-r93V8Gcsnz', type: 'image' },
-  { id: 'graph-4', title: 'Creative Graphic 4', category: 'Graphic', tag: 'Design', imageUrl: 'https://drive.google.com/uc?export=view&id=1nVnHt2Cq-_nmlFfTeuQJFXjWGbRoYGls', type: 'image' },
-  { id: 'graph-5', title: 'Creative Graphic 5', category: 'Graphic', tag: 'Design', imageUrl: 'https://drive.google.com/uc?export=view&id=1yZgMww6e2UcD6xzeKaMcZPTME34d0M0l', type: 'image' },
-  { id: 'graph-6', title: 'Creative Graphic 6', category: 'Graphic', tag: 'Design', imageUrl: 'https://drive.google.com/uc?export=view&id=1U_0k3jeaUviKnlai9IkE9Fa8CsARcloD', type: 'image' },
+  // Graphics (Cloudinary Images)
+  { id: 'graph-1', title: 'Creative Graphic 1', category: 'Graphic', tag: 'Design', imageUrl: 'https://res.cloudinary.com/dzdfz5ron/image/upload/v1770638433/3_klw665.png', type: 'image' },
+  { id: 'graph-2', title: 'Creative Graphic 2', category: 'Graphic', tag: 'Design', imageUrl: 'https://res.cloudinary.com/dzdfz5ron/image/upload/v1770638431/6_fmzabt.png', type: 'image' },
+  { id: 'graph-3', title: 'Creative Graphic 3', category: 'Graphic', tag: 'Design', imageUrl: 'https://res.cloudinary.com/dzdfz5ron/image/upload/v1770638431/Untitled_design_-_2026-01-06T195416.148_tmh4ma.png', type: 'image' },
+  { id: 'graph-4', title: 'Creative Graphic 4', category: 'Graphic', tag: 'Design', imageUrl: 'https://res.cloudinary.com/dzdfz5ron/image/upload/v1770638413/1_vl6ypo.png', type: 'image' },
+  { id: 'graph-5', title: 'Creative Graphic 5', category: 'Graphic', tag: 'Design', imageUrl: 'https://res.cloudinary.com/dzdfz5ron/image/upload/v1770638413/2_iwldtg.png', type: 'image' },
+  { id: 'graph-6', title: 'Creative Graphic 6', category: 'Graphic', tag: 'Design', imageUrl: 'https://res.cloudinary.com/dzdfz5ron/image/upload/v1770638413/5_scixlw.png', type: 'image' },
 ];

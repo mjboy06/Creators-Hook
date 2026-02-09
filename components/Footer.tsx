@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
           <div className="sm:col-span-2">
             <div className="flex items-center gap-3 mb-6 sm:mb-8 group cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               <img 
-                src="https://drive.google.com/uc?export=view&id=12a_ioZchlLWK5vf9jaPdr8XiRYuPTvAu" 
+                src="https://res.cloudinary.com/dzdfz5ron/image/upload/v1770638412/creators_hook_2_klkzgk.png" 
                 alt="Creators Hook Logo" 
                 className="w-10 h-10 sm:w-12 sm:h-12 object-contain brightness-125"
               />

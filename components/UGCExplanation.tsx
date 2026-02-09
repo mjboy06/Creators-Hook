@@ -62,7 +62,7 @@ const UGCExplanation: React.FC = () => {
             <div className="relative reveal-item">
               <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl transform md:rotate-3 scale-95 hover:rotate-0 transition-transform duration-700 border-4 border-white/5">
                 <img 
-                  src="https://drive.google.com/uc?export=view&id=10jTxEixRtrFKg4B-Zow6SKPOXS_cBVT2" 
+                  src="https://res.cloudinary.com/dzdfz5ron/image/upload/v1770638415/ChatGPT_Image_Jan_4_2026_09_19_55_AM_zhwzlc.png" 
                   alt="UGC Creators Content" 
                   className="w-full h-full object-cover"
                 />
