@@ -5,6 +5,8 @@ import { PortfolioItem } from '../types.ts';
 
 const VideoModal: React.FC<{ item: PortfolioItem | null; onClose: () => void }> = ({ item, onClose }) => {
   if (!item) return null;
+  const isEmbed = item.imageUrl.includes('cloudinary.com/embed');
+
   return (
     <div className="fixed inset-0 z-[200] flex items-center justify-center p-4 sm:p-6 bg-black/95 backdrop-blur-sm transition-all animate-fade-in" onClick={onClose}>
       <button 
@@ -15,12 +17,21 @@ const VideoModal: React.FC<{ item: PortfolioItem | null; onClose: () => void }> 
       </button>
       <div className="relative w-full max-w-[400px] aspect-[9/16] bg-black rounded-3xl overflow-hidden shadow-2xl" onClick={e => e.stopPropagation()}>
         {item.type === 'video' ? (
-          <video 
-            src={item.imageUrl} 
-            controls 
-            autoPlay 
-            className="w-full h-full object-cover"
-          />
+          isEmbed ? (
+            <iframe
+              src={item.imageUrl}
+              className="w-full h-full border-0"
+              allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          ) : (
+            <video 
+              src={item.imageUrl} 
+              controls 
+              autoPlay 
+              className="w-full h-full object-cover"
+            />
+          )
         ) : (
           <img src={item.imageUrl} alt={item.title} className="w-full h-full object-contain" />
         )}
@@ -36,7 +47,6 @@ const Portfolio: React.FC = () => {
 
   const filteredItems = useMemo(() => {
     if (filter === 'All') {
-      // Show only video content in the "All" view
       return PORTFOLIO_ITEMS
         .filter(item => item.type === 'video')
         .sort(() => 0.5 - Math.random())
@@ -82,14 +92,25 @@ const Portfolio: React.FC = () => {
             >
               <div className={`overflow-hidden bg-[#0f172a] ${item.category === 'Graphic' ? 'aspect-[4/5]' : 'aspect-[9/16]'}`}>
                 {item.type === 'video' ? (
-                  <video 
-                    src={item.imageUrl}
-                    autoPlay 
-                    muted 
-                    loop 
-                    playsInline 
-                    className="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 group-hover:scale-110 transition-transform duration-1000 ease-out"
-                  />
+                  item.imageUrl.includes('cloudinary.com/embed') ? (
+                    <div className="w-full h-full relative pointer-events-none">
+                      <iframe
+                        src={`${item.imageUrl}&autoplay=1&muted=1&loop=1`}
+                        className="w-full h-full border-0 absolute inset-0 scale-[1.3]"
+                        allow="autoplay; fullscreen"
+                      ></iframe>
+                      <div className="absolute inset-0 bg-transparent z-10"></div>
+                    </div>
+                  ) : (
+                    <video 
+                      src={item.imageUrl}
+                      autoPlay 
+                      muted 
+                      loop 
+                      playsInline 
+                      className="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 group-hover:scale-110 transition-transform duration-1000 ease-out"
+                    />
+                  )
                 ) : (
                   <img 
                     src={item.imageUrl} 

@@ -9,9 +9,9 @@ const About: React.FC = () => {
           <div className="relative reveal-item order-2 lg:order-1">
             <div className="aspect-[4/5] md:aspect-square rounded-[3rem] sm:rounded-[4rem] bg-slate-50 overflow-hidden relative shadow-2xl group">
                <img 
-                 src="https://www.dropbox.com/scl/fi/iej9o7rn1mwerwucfmfaw/All-Logos-49.png?rlkey=r4u53du2g408s0vva25koryp9&st=v7zw5li4&raw=1" 
+                 src="https://drive.google.com/uc?export=view&id=1_SyvYFX0F_HKphCPHM-STys-OFibGXuG" 
                  alt="Creators Hook Brand Growth" 
-                 className="w-full h-full object-contain p-8 sm:p-16 group-hover:scale-105 transition-transform duration-1000" 
+                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" 
                />
                <div className="absolute inset-0 bg-gradient-to-t from-blue-600/5 to-transparent"></div>
             </div>

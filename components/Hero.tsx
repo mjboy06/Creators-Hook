@@ -2,22 +2,20 @@
 import React from 'react';
 
 const Hero: React.FC = () => {
+  // Using exactly the 8 videos requested in the historical context to ensure complete coverage
   const heroVideos = [
-    "https://www.dropbox.com/scl/fi/lhltyo3a6e7nnc6wmik8j/ugc-6.mp4?rlkey=2j4xt0ekx9vphqr2q9bzebui4&st=9a7fmti8&raw=1",
-    "https://www.dropbox.com/scl/fi/s2yrb6u1bp8q75hea4iow/UGC-5.mp4?rlkey=isyk8km3uu6n74z8cvyzi013a&st=vksb6rhn&raw=1",
-    "https://www.dropbox.com/scl/fi/jw8qyj9qvz0ju0zae39no/ugc-4.mp4?rlkey=snkswbncjegafykucd8uuhhf5&st=r6cbjq43&raw=1",
-    "https://www.dropbox.com/scl/fi/ugswlzr2ylufzohi32msq/in-6.mp4?rlkey=j8htm7jtry7u5spk7o5zlfv6h&st=9hl08hi6&raw=1",
-    "https://www.dropbox.com/scl/fi/3ls879db665hncowegutn/in-5.mp4?rlkey=jn5z1gho09nr3azddtj993o3p&st=s9h7458k&raw=1",
-    "https://www.dropbox.com/scl/fi/5lj0yar5c8xkm4zw87ath/in-4.mp4?rlkey=yrcy1oemsybfhww8l6c4miijz&st=33fskazx&raw=1"
+    "https://player.cloudinary.com/embed/?cloud_name=dzdfz5ron&public_id=ugc_6_tmimtr",
+    "https://player.cloudinary.com/embed/?cloud_name=dzdfz5ron&public_id=UGC_5_cxduv0",
+    "https://player.cloudinary.com/embed/?cloud_name=dzdfz5ron&public_id=ugc_4_oeh7lg",
+    "https://player.cloudinary.com/embed/?cloud_name=dzdfz5ron&public_id=in_6_n59vyv",
+    "https://player.cloudinary.com/embed/?cloud_name=dzdfz5ron&public_id=in_5_uxlt16",
+    "https://player.cloudinary.com/embed/?cloud_name=dzdfz5ron&public_id=in_6_n59vyv", // Repeated as requested for marquee density
+    "https://player.cloudinary.com/embed/?cloud_name=dzdfz5ron&public_id=in_5_uxlt16", // Repeated as requested for marquee density
+    "https://player.cloudinary.com/embed/?cloud_name=dzdfz5ron&public_id=in_4_enqh3w"
   ];
 
   return (
     <section className="relative pt-32 sm:pt-48 pb-12 sm:pb-20 bg-white overflow-hidden" id="home">
-      {/* Background Image Overlay */}
-      <div 
-        className="absolute inset-0 z-0 opacity-10 pointer-events-none bg-cover bg-center"
-        style={{ backgroundImage: `url('https://www.dropbox.com/scl/fi/iej9o7rn1mwerwucfmfaw/All-Logos-49.png?rlkey=r4u53du2g408s0vva25koryp9&st=v7zw5li4&raw=1')` }}
-      ></div>
       <div className="absolute inset-0 z-0 watermark-bg opacity-[0.02]"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center mb-16 sm:mb-24 relative z-10">
@@ -51,15 +49,12 @@ const Hero: React.FC = () => {
         <div className="flex animate-marquee-fast hover:[animation-play-state:paused]">
           {[...heroVideos, ...heroVideos, ...heroVideos].map((url, i) => (
             <div key={i} className="flex-shrink-0 mx-3 sm:mx-5 w-[180px] sm:w-[280px] aspect-[9/16] rounded-[2rem] sm:rounded-[3rem] overflow-hidden shadow-2xl bg-black group relative border border-slate-100">
-               <video 
-                 src={url} 
-                 autoPlay 
-                 muted 
-                 loop 
-                 playsInline 
-                 className="w-full h-full object-cover opacity-90 group-hover:scale-110 transition-transform duration-1000"
-               />
-               <div className="absolute inset-0 bg-blue-600/10 group-hover:bg-transparent transition-colors"></div>
+               <iframe
+                 src={`${url}&autoplay=1&muted=1&loop=1`}
+                 className="w-full h-full border-0 pointer-events-none scale-[1.3]"
+                 allow="autoplay; fullscreen"
+               ></iframe>
+               <div className="absolute inset-0 bg-blue-600/10 group-hover:bg-transparent transition-colors z-10"></div>
             </div>
           ))}
         </div>
