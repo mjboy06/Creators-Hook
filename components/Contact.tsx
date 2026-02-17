@@ -1,6 +1,5 @@
 
 import React, { useState } from 'react';
-import { supabase } from '../lib/supabase.ts';
 
 const Contact: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -13,25 +12,39 @@ const Contact: React.FC = () => {
     setError(null);
 
     const formData = new FormData(e.currentTarget);
-    const data = {
-      name: formData.get('name'),
-      email: formData.get('email'),
-      company: formData.get('company'),
-      message: formData.get('message'),
-    };
+    const name = formData.get('name') as string;
+    const email = formData.get('email') as string;
+    const company = formData.get('company') as string;
+    const message = formData.get('message') as string;
+
+    const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSe5ISaSpkUBR15QfHyMVqIL3oZDGoFGq-E2FxuGdCvuqwBuWA/formResponse";
+
+    // Use URLSearchParams for x-www-form-urlencoded format expected by Google Forms
+    const formBody = new URLSearchParams();
+    formBody.append('entry.402268159', name);
+    formBody.append('entry.1770783106', email);
+    formBody.append('entry.224898423', company);
+    formBody.append('entry.1608560634', message);
 
     try {
-      const { error: supabaseError } = await supabase
-        .from('inquiries')
-        .insert([data]);
+      // Google Forms doesn't support CORS for direct AJAX submissions from other origins.
+      // We use 'no-cors' to send the data without requiring a CORS preflight.
+      // Note: With 'no-cors', we cannot read the response body or status code.
+      await fetch(GOOGLE_FORM_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: formBody.toString(),
+      });
 
-      if (supabaseError) throw supabaseError;
-
+      // Since we can't get a success response in no-cors mode, we assume success if no error was thrown in the request attempt.
       setIsSubmitted(true);
-      console.log('Inquiry submitted to Supabase successfully');
+      console.log('Inquiry submitted to Google Forms successfully');
     } catch (err: any) {
       console.error('Error submitting inquiry:', err);
-      setError(err.message || 'Something went wrong. Please try again.');
+      setError('Something went wrong. Please check your connection and try again.');
     } finally {
       setIsLoading(false);
     }
